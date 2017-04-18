@@ -131,7 +131,7 @@ public class StudentController {
     @GET
     @Path("/images/{fileName}")
     @Produces({"image/png", "image/jpg", "image/gif"})
-    public Response getStuentImage(@PathParam("fileName") String filename) {
+    public Response getStudentImage(@PathParam("fileName") String filename) {
         File file = Paths.get(imageServerDir + filename).toFile();
         if (file.exists()) {
             ResponseBuilder responseBuilder = Response.ok((Object) file);
